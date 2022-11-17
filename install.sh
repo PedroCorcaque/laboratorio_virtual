@@ -37,7 +37,7 @@ git clone https://github.com/PedroCorcaque/labvirtual-backend.git
 
 # Setup the backend
 cd ~/laboratorio_virtual/labvirtual-backend
-pip3 install requirements.txt
+pip3 install -r requirements.txt
 
 # Clone the frontend repository
 cd ~/laboratorio_virtual
@@ -53,4 +53,4 @@ git clone https://github.com/PedroCorcaque/LabVirtual-AgroIOT.git
 
 # Setup the LabVirtual-AgroIOT
 cd ~/laboratorio_virtual/LabVirtual-AgroIOT
-pip3 install requirements.txt
+pip3 install -r requirements.txt
