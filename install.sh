@@ -31,21 +31,18 @@ command_exists npm || {
 # Create main directory
 mkdir ~/laboratorio_virtual
 
-# Clone the backend repository
-cd ~/laboratorio_virtual
-git clone https://github.com/PedroCorcaque/labvirtual-backend.git
-
-# Setup the backend
-cd ~/laboratorio_virtual/labvirtual-backend
-pip3 install -r requirements.txt
-
-# Clone the frontend repository
+# Clone the interface repository
 cd ~/laboratorio_virtual
 git clone https://github.com/PedroCorcaque/labvirtual-interface.git
 
 # Setup the frontend
 cd ~/laboratorio_virtual/labvirtual-interface
 npm install
+cd ~/laboratorio_virtual/labvirtual-interface/backend
+
+python3 -m venv venv
+. venv/bin/activate
+pip3 install -r requirements.txt
 
 # Clone the LabVirtual-AgroIOT repository
 cd ~/laboratorio_virtual
@@ -54,3 +51,4 @@ git clone https://github.com/PedroCorcaque/LabVirtual-AgroIOT.git
 # Setup the LabVirtual-AgroIOT
 cd ~/laboratorio_virtual/LabVirtual-AgroIOT
 pip3 install -r requirements.txt
+chmod +x read_serial.py
